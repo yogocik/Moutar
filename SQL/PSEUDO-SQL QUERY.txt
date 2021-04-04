@@ -1,0 +1,16 @@
+
+2)
+
+SELECT T.PRODUCT_ID, P.NAME, C.GENDER , COUNT(T.PRODUCT_ID) from TRANSACTION T join CUSTOMER C on T.CUSTOMER_ID = C.ID join PRODUCT P on T.PRODUCT_ID = P.ID group by T.PRODUCT_ID, P.NAME, C.GENDER ORDER BY COUNT(T.PRODUCT_ID) DESC;
+
+===============================================================================================
+3)
+
+SELECT T.CUSTOMER_ID, C.NAME, C.GENDER, T.ACCUMULATIVE_PAYMENT from TRANSACTION T JOIN CUSTOMER C on T.CUSTOMER_ID = C.ID ORDER BY T.ACCUMULATIVE_PAYMENT DESC;
+
+===============================================================================================
+4)
+
+SELECT FROM_UNIXTIME(FLOORING(UNIX_TIMESTAMP('BOOKING_TIME')/7200)*7200 AS time_interval, COUNT(*) AS transaction_count FROM TRANSACTION GROUP BY time_interval; 
+
+

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#parent {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color:blue;
+    position:relative;
+    height:500px;
+    width:500px;
+}
+
+.target-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.box-outer {
+    height:200px;
+    width:400px;
+}
+
+.box-inner {
+    height:80px;
+    width:140px;
+}
+
+.center {
+    margin:auto;
+    background-color:red;
+}
+
+.bottom-right {
+    margin:auto 0 0 auto;
+    background-color:green;
+}
